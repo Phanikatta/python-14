@@ -1,0 +1,28 @@
+#Ass-1n=int(input())
+l=list(map(int,input().split()))
+m=max(l)
+s=min(l)
+print(m)
+print(s)
+
+#Ass-2
+def largest( arr, n):
+    m=arr[0]
+    for i in range(n):
+        if arr[i]>m:
+            m=arr[i]
+    return m
+n=int(input())
+l=list(map(int,input().split()))
+print(largest(l,n))
+
+#Ass-3
+n=int(input())
+l=list(map(int,input().split()))
+osum=0
+asum=0
+for i in range(1,n+1):#finding overall sum upto given number
+    osum=osum+i
+for i in range(0,n-1):#finding given array sum
+    asum=asum+l[i]
+print(osum-asum)
